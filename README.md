@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YouTube Ses İndirici
 
-## Getting Started
+YouTube videolarından ses indirmeye olanak sağlayan, Next.js ile geliştirilmiş modern bir web uygulaması.
 
-First, run the development server:
+## Özellikler
 
+- 🎵 YouTube videolarından ses indirme
+- 🖼️ Video küçük resimleri ve bilgilerini görüntüleme
+- 📱 Karanlık mod desteği ile duyarlı, modern arayüz
+- ⚡ Hızlı indirme işlemi
+- 🎨 Güzel gradyan tasarım
+
+## Teknoloji Yığını
+
+- **Next.js 15** - App Router ile React framework
+- **TypeScript** - Tip güvenliği
+- **Tailwind CSS** - Stil
+- **@distube/ytdl-core** - YouTube video indirme
+- **Fluent-FFmpeg** - Ses işleme
+
+## Başlarken
+
+### Önkoşullar
+
+- Node.js 18+ 
+- npm veya yarn
+
+### Kurulum
+
+1. Depoyu klonlayın:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repo-url>
+cd ytdownloader
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Bağımlılıkları yükleyin:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Geliştirme sunucusunu çalıştırın:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
 
-## Learn More
+## Kullanım
 
-To learn more about Next.js, take a look at the following resources:
+1. Giriş alanına bir YouTube URL'si girin
+2. Video detaylarını almak için "Video Bilgilerini Al" butonuna tıklayın
+3. Video bilgilerini ve küçük resmini inceleyin
+4. Ses dosyasını indirmek için "Ses İndir" butonuna tıklayın
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Uç Noktaları
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `POST /api/info` - Video bilgilerini al
+- `POST /api/download` - Ses akışını indir
 
-## Deploy on Vercel
+## Notlar
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- İndirilen dosyalar WebM ses formatındadır
+- Lütfen telif hakkı yasalarına saygı gösterin ve yalnızca kullanım izniniz olan içerikleri indirin
+- YouTube sistemlerini sıklıkla güncellediği için işlevsellik zaman zaman güncellenmeye ihtiyaç duyabilir
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Lisans
+
+Bu proje eğitim amaçlıdır. Lütfen YouTube'un Hizmet Şartlarına ve geçerli telif hakkı yasalarına saygı gösterin.
